@@ -1,19 +1,14 @@
-# Send His Word Ministries Website
+# Send His Word Ministries
 
-This is a Vite + React testing deployment package for Vercel.
+Vercel-ready React/Vite church website.
 
-## Local testing
-```bash
-npm install
-npm run dev
-```
+## Deploy
+1. Upload to GitHub
+2. Import into Vercel
+3. Deploy
 
-## Production build
-```bash
-npm run build
-```
+## Admin
+/admin
 
-## Vercel settings
-- Framework Preset: Vite
-- Build Command: npm run build
-- Output Directory: dist
+Password:
+sendhisword2026

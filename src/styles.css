@@ -1,0 +1,127 @@
+ 
+:root{--navy:#10243a;--teal:#0f766e;--gold:#c8942e;--cream:#fbf4e4;--ink:#17202a;--muted:#667085;--line:#e7e0d2;--red:#8c2f24;--sky:#8fd3ff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:#fffaf0;color:var(--ink)}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer;border:0}
+.topbar{position:sticky;top:0;z-index:50;background:white;box-shadow:0 10px 30px #0001}
+.utility{background:var(--navy);color:white;padding:8px 24px;display:flex;justify-content:space-between;font-size:.85rem}
+.navwrap{max-width:1240px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:17px 20px}
+.brand{display:flex;gap:12px;align-items:center;background:transparent;color:var(--navy);text-align:left}
+.brandMark{background:var(--gold);color:white;border-radius:50%;height:48px;width:48px;display:grid;place-items:center;font-weight:900}
+.brand small{display:block;color:var(--teal);letter-spacing:.18em;text-transform:uppercase}
+.desktopNav{display:flex;gap:18px;align-items:center}
+.desktopNav button{background:transparent;font-weight:800;color:var(--navy)}
+.desktopNav button.active,.desktopNav button:hover{color:var(--gold)}
+.navGroup{position:relative}
+.dropdownMenu{display:none;position:absolute;top:100%;left:0;min-width:235px;background:white;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 18px 45px #10243a22}
+.navGroup:hover .dropdownMenu{display:grid;gap:4px}
+.dropdownMenu button{text-align:left;padding:11px 12px;border-radius:12px;white-space:nowrap}
+.dropdownMenu button:hover{background:var(--cream)}
+.giveHeart{height:72px;width:82px;background:var(--sky);color:#0b3a55;font-weight:950;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:48% 48% 45% 45%;box-shadow:0 10px 25px #10243a20}
+.heartSymbol{font-size:1.2rem}
+.giveHeart span{font-size:.82rem;display:block}
+.hamb{display:none;background:transparent;font-size:2rem}
+.mobileNav{display:none}
+.mobileGroup{display:grid;gap:4px}
+.mobileSubnav{display:grid;gap:4px;margin-left:16px}
+.mobileSubnav button{font-size:.92rem;color:var(--muted)}
+.ticker{background:var(--gold);color:white;overflow:hidden;white-space:nowrap;padding:9px 0;font-weight:900}
+.tickerText{display:inline-block;padding-left:100%;animation:ticker 28s linear infinite}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.goldBtn,.whiteBtn,.darkBtn{border-radius:999px;padding:13px 22px;font-weight:900;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.goldBtn{background:var(--gold);color:white}
+.whiteBtn{background:white;color:var(--navy)}
+.darkBtn{background:var(--navy);color:white}
+.small{padding:9px 14px;font-size:.9rem}
+.heroJM{min-height:680px;position:relative;overflow:hidden;display:flex;align-items:center}
+.heroVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);pointer-events:none;filter:saturate(1.08) contrast(1.05) brightness(.82)}
+.heroShade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,36,58,.96),rgba(16,36,58,.72),rgba(15,118,110,.38))}
+.heroContent{position:relative;z-index:2;max-width:850px;padding:110px 24px;margin-left:calc((100vw - 1240px)/2);color:white}
+.heroContent h1{font-size:clamp(2.4rem,5vw,5.3rem);line-height:.98;margin:16px 0;font-weight:950}
+.heroContent p{font-size:1.18rem;line-height:1.75;max-width:700px}
+.heroButtons{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;color:var(--gold);font-size:.78rem;font-weight:950}
+.eyebrow.light{color:#ffe6a3}
+.justForYou,.page{max-width:1240px;margin:auto;padding:70px 20px}
+.justForYou h2,.page h1,.prayerBand h2,.donateBand h2,.sectionTitle{font-size:clamp(2rem,4vw,3.8rem);line-height:1.05;margin:8px 0 28px;font-weight:950;color:var(--navy)}
+.tiles,.cardGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tiles{grid-template-columns:repeat(4,1fr)}
+.tile,.whiteCard{background:white;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 16px 40px #10243a12;text-align:left}
+.tile:hover,.schoolCard:hover{transform:translateY(-4px)}
+.tile h3,.whiteCard h3{color:var(--navy);font-size:1.35rem;margin:0 0 10px}
+.tile p,.whiteCard p{color:var(--muted);line-height:1.7}
+.introCard{background:linear-gradient(135deg,#fff,var(--cream));border-radius:30px;padding:34px;margin-bottom:28px;border:1px solid var(--line)}
+.introCard h2{color:var(--navy);font-size:2.2rem}
+.leadership{display:grid;grid-template-columns:.7fr 1.3fr;gap:28px;align-items:center;background:white;border-radius:32px;padding:30px;margin-top:30px;box-shadow:0 16px 40px #10243a12}
+.pastorPhoto{min-height:340px;border-radius:28px;background:linear-gradient(135deg,var(--navy),var(--teal));color:white;display:grid;place-items:center;text-align:center;font-weight:950;font-size:1.7rem}
+.sliderWrap{overflow:hidden;border-radius:28px;margin:30px 0}
+.slideTrack{display:flex;gap:18px;width:max-content;animation:slide 28s linear infinite}
+.churchSlide{width:320px;height:210px;border-radius:24px;background:linear-gradient(135deg,var(--teal),var(--navy));color:white;display:grid;place-items:center;text-align:center;font-weight:950;padding:20px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.prayerBand,.donateBand{margin:45px auto;max-width:1240px;border-radius:36px;background:linear-gradient(135deg,var(--teal),var(--navy));color:white;padding:54px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.prayerBand h2,.donateBand h2{color:white;margin:0}
+.donateBand{display:block;text-align:center;background:linear-gradient(135deg,var(--red),var(--navy))}
+.donateBand p{max-width:720px;margin:0 auto 24px;line-height:1.7}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.darkCard,.goldCard,.adminBox{border-radius:28px;padding:30px;box-shadow:0 18px 45px #10243a1a}
+.darkCard,.adminBox{background:var(--navy);color:white}
+.goldCard{background:var(--gold);color:white}
+.toolbar{display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:24px}
+.toolbar input{min-width:280px;flex:1}
+.pillRow{display:flex;gap:10px;flex-wrap:wrap}
+.pill{border:1px solid var(--line);border-radius:999px;background:white;padding:10px 15px;font-weight:900}
+.pill.active{background:var(--navy);color:white}
+input,textarea,select{width:100%;padding:14px 16px;border-radius:16px;border:1px solid var(--line);margin-top:8px;outline:none;background:white}
+textarea{min-height:120px}
+label{display:block;font-weight:800;margin-top:14px}
+.darkLabel input,.darkCard textarea,.darkCard select{background:#ffffff12;border-color:#ffffff22;color:white}
+.form{display:flex;flex-direction:column;gap:8px}
+.media{height:180px;border-radius:18px;background:var(--navy);display:grid;place-items:center;color:var(--gold);font-size:3rem;margin-bottom:18px}
+.tag{display:inline-block;background:var(--cream);color:var(--red);font-weight:900;padding:6px 11px;border-radius:999px}
+.stack{display:grid;gap:18px}
+.givingGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.giving{padding:16px;border-radius:18px;background:white;border:1px solid var(--line);font-weight:900;text-align:left}
+.giving.active{background:var(--cream);border-color:var(--gold)}
+.mapBox{min-height:360px;border-radius:28px;background:#e8f1ef;display:grid;place-items:center;text-align:center;color:var(--teal);font-size:3rem;padding:30px}
+.midIntro{font-size:1.2rem;line-height:1.8;max-width:900px;color:var(--muted);margin-bottom:28px}
+.schoolCard span{color:var(--gold);font-weight:950}
+.recordBox{margin-top:20px;border:2px dashed var(--line);border-radius:24px;padding:26px;background:white;text-align:center;color:var(--muted);font-weight:900}
+.testimonySlider{overflow:hidden;margin-top:20px}
+.testimonyTrack{display:flex;gap:18px;animation:slide 32s linear infinite;width:max-content}
+.testimonySlide{width:360px;background:white;border-radius:24px;padding:24px;box-shadow:0 16px 40px #10243a12}
+.adminLogin{min-height:100vh;background:linear-gradient(135deg,var(--navy),var(--teal));display:grid;place-items:center;padding:20px}
+.adminLogin form{background:white;border-radius:28px;padding:36px;max-width:440px;width:100%;box-shadow:0 20px 60px #0004}
+.adminPanel{background:#ffffff12;border-radius:22px;padding:22px;margin-top:18px}
+.adminHead,.adminItem{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.adminItem{background:#ffffff12;border-radius:14px;padding:14px;margin-top:10px}
+.adminPanel button{background:var(--gold);color:white;border-radius:999px;padding:9px 14px;font-weight:900}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:100;background:var(--navy);color:white;border-radius:18px;padding:14px 18px;width:min(92%,560px);display:flex;justify-content:space-between;box-shadow:0 18px 50px #0004}
+.toast button{background:transparent;color:white;font-size:1.5rem}
+footer{background:var(--navy);color:white;padding:48px 24px;display:flex;justify-content:space-between;gap:24px;align-items:center}
+footer button{background:#ffffff18;color:white;border-radius:999px;padding:10px 14px;margin-left:8px}
+.empty{background:white;border-radius:22px;padding:25px;text-align:center}
+.topSpace{margin-top:28px}
+@media(max-width:1040px){
+  .desktopNav{display:none}
+  .hamb{display:block}
+  .mobileNav{display:grid;padding:12px 20px;border-top:1px solid var(--line);gap:8px}
+  .mobileNav button{background:transparent;text-align:left;padding:12px;border-radius:12px;font-weight:900}
+  .mobileNav .active{background:var(--cream);color:var(--gold)}
+  .mobileGive{width:92px;margin-top:8px}
+  .heroContent{margin-left:0}
+  .tiles,.cardGrid,.twoCol,.leadership{grid-template-columns:1fr 1fr}
+  .prayerBand{display:block}
+}
+@media(max-width:680px){
+  .utility{display:none}
+  .heroJM{min-height:620px}
+  .heroContent{padding:80px 18px}
+  .tiles,.cardGrid,.twoCol,.givingGrid,.leadership{grid-template-columns:1fr}
+  .prayerBand,.donateBand{border-radius:0;margin:0;padding:38px 20px}
+  footer{display:block}
+  .heroVideo{transform:scale(1.4)}
+  .giveHeart{height:60px;width:70px}
+  .churchSlide{width:260px}
+  .testimonySlide{width:280px}
+}

@@ -1,0 +1,723 @@
+:root {
+  --navy: #071d33;
+  --blue: #0c3157;
+  --sky: #25b8ed;
+  --gold: #c99a35;
+  --soft: #f7fbff;
+  --cream: #fff9ef;
+  --ink: #172033;
+  --muted: #606b7d;
+  --line: #e3e8ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: #fff;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.serviceBar {
+  min-height: 34px;
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 8px 20px;
+  font-size: .82rem;
+  flex-wrap: wrap;
+}
+
+.navWrap {
+  max-width: 1180px;
+  margin: auto;
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.brand {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  min-width: 210px;
+}
+
+.logoMark {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--blue), var(--sky));
+  color: #fff;
+  font-size: .82rem;
+  font-weight: 900;
+}
+
+.brandText {
+  color: var(--navy);
+  font-weight: 900;
+  font-size: .96rem;
+  line-height: 1.12;
+  max-width: 150px;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.desktopNav button,
+.navGroup > button {
+  background: transparent;
+  color: var(--ink);
+  font-size: .86rem;
+  font-weight: 800;
+  padding: 10px 4px;
+}
+
+.desktopNav button:hover,
+.desktopNav .active,
+.navGroup > button.active {
+  color: var(--sky);
+}
+
+.navGroup {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  display: none;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 18px 45px rgba(7, 29, 51, .16);
+}
+
+.navGroup:hover .dropdownMenu {
+  display: grid;
+  gap: 4px;
+}
+
+.dropdownMenu button {
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.dropdownMenu button:hover {
+  background: var(--soft);
+}
+
+.giveHeart {
+  width: 64px;
+  height: 58px;
+  color: #fff;
+  background: var(--sky);
+  font-weight: 950;
+  display: grid;
+  place-items: center;
+  clip-path: path("M32 56 C10 39 2 26 7 14 C12 2 25 4 32 15 C39 4 52 2 57 14 C62 26 54 39 32 56 Z");
+  filter: drop-shadow(0 8px 14px rgba(37, 184, 237, .28));
+}
+
+.giveHeart span {
+  transform: translateY(-2px);
+}
+
+.menuButton,
+.mobileNav {
+  display: none;
+}
+
+.hero {
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: var(--navy);
+}
+
+.heroMedia {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 29, 51, .94), rgba(7, 29, 51, .72), rgba(7, 29, 51, .15)),
+    url('/images/healing-ministry.png') center / cover;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: auto;
+  width: 100%;
+  padding: 76px 20px;
+  color: #fff;
+}
+
+.scriptLine {
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin: 0 0 4px;
+}
+
+.heroContent h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.25rem, 5vw, 3.7rem);
+  line-height: 1.06;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.heroContent h2 {
+  font-size: 1.18rem;
+  margin: 0 0 14px;
+  color: #d9f5ff;
+}
+
+.heroContent p {
+  font-size: 1.02rem;
+  line-height: 1.72;
+  color: #eef8fc;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.primaryBtn,
+.secondaryBtn,
+.lightBtn {
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 900;
+}
+
+.primaryBtn {
+  background: var(--sky);
+  color: #fff;
+}
+
+.primaryBtn.small {
+  padding: 9px 14px;
+}
+
+.secondaryBtn {
+  background: var(--navy);
+  color: #fff;
+}
+
+.lightBtn {
+  background: #fff;
+  color: var(--blue);
+}
+
+.quickGrid,
+.visionStrip,
+.section,
+.page {
+  max-width: 1180px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.quickGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: -42px;
+  position: relative;
+  z-index: 2;
+}
+
+.quickCard,
+.card,
+.formCard,
+.introText {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(7, 29, 51, .08);
+}
+
+.quickCard {
+  padding: 18px;
+  text-align: left;
+}
+
+.quickCard h3,
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 1.06rem;
+}
+
+.quickCard p,
+.card p,
+.introText p,
+.articleText p {
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.quickCard span {
+  color: var(--sky);
+  font-weight: 900;
+}
+
+.visionStrip {
+  display: grid;
+  grid-template-columns: .9fr 1.3fr;
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.visionStrip article {
+  background: linear-gradient(135deg, #fff, var(--soft));
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--sky);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.visionStrip h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  margin: 0 0 10px;
+  font-size: 1.26rem;
+  line-height: 1.32;
+}
+
+.visionStrip b,
+.faithCard b {
+  color: var(--gold);
+}
+
+.section,
+.page {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.page h1,
+.section h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  font-size: clamp(1.8rem, 3vw, 2.55rem);
+  line-height: 1.16;
+  margin: 6px 0 26px;
+  font-weight: 700;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--sky);
+  font-size: .74rem;
+  font-weight: 900;
+}
+
+.ministryGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.ministryGrid.full {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ministryTile {
+  min-height: 128px;
+  border-radius: 8px;
+  padding: 18px;
+  text-align: left;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(7, 29, 51, .88), rgba(12, 49, 87, .72)), url('/images/youth-ministry.png') center / cover;
+}
+
+.ministryTile h3 {
+  margin: 0 0 18px;
+  font-size: 1.02rem;
+}
+
+.ministryTile span {
+  color: #d9f5ff;
+  font-weight: 900;
+}
+
+.introText {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.twoCol,
+.threeCol {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.twoCol {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.threeCol {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  padding: 22px;
+}
+
+.featureHero,
+.articleHero {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.featureHero {
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.featureHero img,
+.articleHero img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.featureHero h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+  line-height: 1.22;
+  margin: 4px 0 12px;
+}
+
+.featureHero p {
+  color: #eef8fc;
+  line-height: 1.74;
+}
+
+blockquote {
+  border-left: 4px solid var(--gold);
+  margin: 18px 0 0;
+  padding: 12px 0 12px 16px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+blockquote span {
+  display: block;
+  margin-top: 8px;
+  color: #d9f5ff;
+  font-weight: 900;
+}
+
+.articleText {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.faithIntro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.faithIntro p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 820px;
+}
+
+.faithCarousel {
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.faithCarousel:hover .faithTrack,
+.faithCarousel.paused .faithTrack {
+  animation-play-state: paused;
+}
+
+.faithTrack {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: faithScroll 60s linear infinite;
+}
+
+.faithCard {
+  width: 360px;
+  min-height: 300px;
+  background: linear-gradient(135deg, #fff, var(--cream));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px;
+  animation: faithFade 9s ease-in-out infinite;
+}
+
+.faithCard h3 {
+  color: var(--navy);
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+}
+
+.faithCard p {
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+@keyframes faithScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes faithFade {
+  0%, 100% { opacity: .7; }
+  25%, 75% { opacity: 1; }
+}
+
+.darkPanel {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.darkPanel p {
+  color: #d9f5ff;
+}
+
+.formCard {
+  padding: 22px;
+}
+
+label {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 13px 14px;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+footer {
+  background: var(--navy);
+  color: #fff;
+  padding: 34px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+footer h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 0 0 8px;
+}
+
+footer p {
+  margin: 0;
+  color: #d9f5ff;
+}
+
+.footerActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footerActions button {
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-weight: 800;
+}
+
+@media (max-width: 1060px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+    background: var(--soft);
+    color: var(--navy);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-weight: 900;
+  }
+
+  .mobileNav.open {
+    display: grid;
+    gap: 6px;
+    padding: 10px 20px 18px;
+    border-top: 1px solid var(--line);
+  }
+
+  .mobileNav button {
+    background: var(--soft);
+    color: var(--navy);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: left;
+    font-weight: 800;
+  }
+
+  .mobileNav button.active {
+    background: #e7f8ff;
+    color: var(--blue);
+  }
+
+  .quickGrid,
+  .ministryGrid,
+  .ministryGrid.full,
+  .threeCol {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featureHero,
+  .articleHero,
+  .visionStrip {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .serviceBar {
+    display: none;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brandText {
+    display: none;
+  }
+
+  .logoMark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .giveHeart {
+    width: 58px;
+    height: 52px;
+  }
+
+  .hero {
+    min-height: 540px;
+  }
+
+  .heroContent h1 {
+    font-size: 2.35rem;
+  }
+
+  .quickGrid,
+  .ministryGrid,
+  .ministryGrid.full,
+  .twoCol,
+  .threeCol {
+    grid-template-columns: 1fr;
+  }
+
+  .quickGrid {
+    margin-top: 20px;
+  }
+
+  .faithIntro {
+    display: block;
+  }
+
+  .faithIntro .primaryBtn {
+    margin-top: 14px;
+  }
+
+  .faithCard {
+    width: 290px;
+  }
+
+  footer {
+    display: block;
+  }
+
+  .footerActions {
+    margin-top: 18px;
+  }
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send His Word Ministries</title>
+  <style>
+    :root{--blue:#10243a;--deep:#051b35;--orange:#ff7a00;--sky:#29bdf4;--muted:#5d6675;--line:#e6e1d8;--cream:#fff8ec}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial,sans-serif;color:#111827;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .top{background:linear-gradient(90deg,#001a33,#082746);color:white;padding:10px 7vw;text-align:right;font-size:.94rem}
+    header{position:sticky;top:0;z-index:20;background:white;box-shadow:0 10px 30px #001a3314}
+    .nav{max-width:1240px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:8px 20px}
+    .brand img{height:78px;width:auto;display:block}
+    nav{display:flex;gap:22px;align-items:center;font-weight:900}
+    nav a:hover{color:var(--orange)}
+    .give{height:70px;width:74px;background:var(--sky);color:white;display:grid;place-items:center;border-radius:50% 50% 45% 45%;transform:rotate(45deg);font-weight:950}
+    .give span{transform:rotate(-45deg)}
+    .ticker{background:var(--orange);color:white;font-weight:900;padding:11px 20px;text-align:center}
+    .hero{min-height:540px;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--deep)}
+    .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.52) saturate(1.08)}
+    .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,15,32,.96),rgba(0,15,32,.68),rgba(0,0,0,.15))}
+    .heroContent{position:relative;z-index:1;color:white;max-width:720px;margin-left:max(20px,calc((100vw - 1240px)/2));padding:60px 20px}
+    .script{font-family:Georgia,serif;color:var(--orange);font-size:1.7rem;margin:0 0 4px}
+    h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1;margin:0 0 12px;color:var(--blue)}
+    .hero h1{color:white}
+    .hero h2{font-size:1.35rem;margin:8px 0 14px}
+    .hero p,.intro p,.schoolHero p{line-height:1.7;font-size:1.08rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:9px;background:var(--orange);color:white;font-weight:950;margin:10px 10px 0 0}
+    .btn.dark{background:var(--blue)}
+    section{max-width:1240px;margin:auto;padding:68px 20px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.22em;color:var(--orange);font-size:.8rem;font-weight:950}
+    .quick,.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .quick{margin-top:-46px;position:relative;z-index:3;padding-top:0}
+    .card{background:white;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 16px 40px #001a3310}
+    .card h3{margin:0 0 10px;color:var(--blue)}
+    .card p{color:var(--muted);line-height:1.65}
+    .intro{display:grid;grid-template-columns:1.3fr .8fr;gap:26px;align-items:stretch}
+    .pastor{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 12px 30px #001a3310}
+    .pastor img{width:100%;height:190px;object-fit:cover;border-radius:12px;background:#eef3f8}
+    .schoolHero{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch;background:linear-gradient(135deg,#fff,#fff3e4);border:1px solid var(--line);border-radius:24px;padding:30px}
+    .pills{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+    .pill{background:white;border:1px solid var(--line);border-radius:999px;padding:9px 13px;color:var(--blue);font-weight:900}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .tile{min-height:210px;border-radius:18px;background:linear-gradient(135deg,rgba(5,27,53,.88),rgba(255,122,0,.82));color:white;padding:20px;display:flex;flex-direction:column;justify-content:flex-end}
+    .tile small{color:#fff3e4}
+    .band{background:linear-gradient(135deg,var(--orange),var(--blue));color:white;border-radius:28px;text-align:center;padding:46px;margin-top:30px}
+    .band h2{color:white;margin-top:0}
+    footer{background:var(--blue);color:white;padding:46px 7vw;display:flex;justify-content:space-between;gap:20px}
+    footer p{color:#f2d299}
+    @media(max-width:900px){nav{display:none}.quick,.grid,.intro,.schoolHero{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr}.brand img{height:66px}}
+    @media(max-width:640px){.top{display:none}.quick,.grid,.intro,.schoolHero,.pastor{grid-template-columns:1fr}.quick{margin-top:20px}.hero{min-height:620px}.give{height:58px;width:62px}footer{display:block}.brand img{height:58px}}
+  </style>
+</head>
+<body>
+  <div class="top">Prayer Line: 0773 272 195 / 0705 272 195</div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home"><img src="shw-logo.png" alt="Send His Word Ministries logo"></a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#ministries">Ministries</a>
+        <a href="#discipleship">Discipleship</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="give" href="#giving"><span>Give</span></a>
+    </div>
+  </header>
+  <div class="ticker">Sunday Service: 9:00 AM - 12:00 PM | Wednesday Bible Study: 6:00 PM - 8:00 PM | Friday Prayer Night: 6:00 PM - 8:00 PM</div>
+
+  <main id="home">
+    <div class="hero">
+      <video src="homepage-highlight.mp4" autoplay muted loop playsinline></video>
+      <div class="shade"></div>
+      <div class="heroContent">
+        <p class="script">Welcome to</p>
+        <h1>Send His Word Ministries</h1>
+        <h2>“Making Disciples of All Nations” - Matthew 28:19-20</h2>
+        <p>A Christ-centered ministry committed to teaching the Word of God, raising disciples, strengthening families, and reaching the nations with the Gospel of Jesus Christ.</p>
+        <a class="btn" href="#media">Watch Latest Sermon</a>
+        <a class="btn dark" href="#contact">Request Prayer</a>
+      </div>
+    </div>
+
+    <section class="quick">
+      <div class="card"><h3>Grow in the Word</h3><p>Study the Bible and grow spiritually through discipleship, prayer and teaching.</p></div>
+      <div class="card"><h3>Watch & Listen</h3><p>Sermons, teachings, worship moments and live stream links for the ministry.</p></div>
+      <div class="card"><h3>Our Ministries</h3><p>Find your place to serve and grow through the ministry family.</p></div>
+      <div class="card"><h3>Support the Ministry</h3><p>Partner with us to reach more souls and strengthen discipleship work.</p></div>
+    </section>
+
+    <section id="about" class="intro">
+      <div class="card">
+        <p class="eyebrow">About Us</p>
+        <h1>A Church Family Built on the Word, Prayer and Discipleship</h1>
+        <p>Send His Word Ministries is a Christ-centered family of believers passionate about making disciples of all nations through the living Word of God.</p>
+      </div>
+      <div class="pastor">
+        <img src="https://drive.google.com/thumbnail?id=1m3cFJMbdA7n2gGTDLARiTBTNNSmMXOEW&sz=w1000" alt="Lead Pastor">
+        <div>
+          <p class="eyebrow">Leadership</p>
+          <h3>Lead Pastor</h3>
+          <p>The Lead Pastor gives spiritual oversight to Send His Word Ministries, teaching the Word, strengthening families and raising disciples.</p>
+          <a class="btn" href="https://drive.google.com/file/d/1m3cFJMbdA7n2gGTDLARiTBTNNSmMXOEW/view?usp=drive_link" target="_blank" rel="noreferrer">Open Pastor Photo</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="ministries">
+      <p class="eyebrow">Ministries</p>
+      <h1>Find Your Place to Grow and Serve</h1>
+      <div class="grid">
+        <div class="card"><h3>Discipleship Ministry</h3><p>Raising and equipping disciples for Kingdom impact.</p></div>
+        <div class="card"><h3>Married's Ministry</h3><p>Strengthening marriages and building godly homes.</p></div>
+        <div class="card"><h3>Youth Ministry</h3><p>Empowering young people to know Christ and live with purpose.</p></div>
+        <div class="card"><h3>Children's Ministry</h3><p>Nurturing children in the Word, prayer, worship and love of God.</p></div>
+        <div class="card"><h3>Healing Ministry</h3><p>Prayer, counselling, teaching and testimonies through healing sessions.</p></div>
+      </div>
+    </section>
+
+    <section id="discipleship">
+      <p class="eyebrow">Discipleship Ministry</p>
+      <h1>Three Centres. One Mission.</h1>
+      <div class="schoolHero">
+        <div>
+          <h2>Northern Discipleship School</h2>
+          <p>Raises believers grounded in the Word, strengthened in prayer and equipped for community transformation across Northern Uganda.</p>
+          <div class="pills"><span class="pill">Biblical foundations</span><span class="pill">Prayer formation</span><span class="pill">Community witness</span></div>
+          <a class="btn" href="https://drive.google.com/drive/folders/1xhEARlki4QTIn-kusVSXogPVHkxguXIt?usp=drive_link" target="_blank" rel="noreferrer">Open Northern Gallery</a>
+        </div>
+        <div class="gallery"><a class="tile" href="https://drive.google.com/drive/folders/1xhEARlki4QTIn-kusVSXogPVHkxguXIt?usp=drive_link" target="_blank"><b>Class Sessions</b><small>View photos in Drive</small></a><a class="tile" href="https://drive.google.com/drive/folders/1xhEARlki4QTIn-kusVSXogPVHkxguXIt?usp=drive_link" target="_blank"><b>Prayer and Worship</b><small>View photos in Drive</small></a><a class="tile" href="https://drive.google.com/drive/folders/1xhEARlki4QTIn-kusVSXogPVHkxguXIt?usp=drive_link" target="_blank"><b>Fellowship Moments</b><small>View photos in Drive</small></a></div>
+      </div>
+      <div class="schoolHero">
+        <div>
+          <h2>Central Discipleship School</h2>
+          <p>Equips disciples to serve faithfully in church, family and community through teaching, mentoring and ministry practice.</p>
+          <div class="pills"><span class="pill">Word-based discipleship</span><span class="pill">Leadership growth</span><span class="pill">Practical service</span></div>
+          <a class="btn" href="https://drive.google.com/drive/folders/1NVfebPLwDzhKGnLvX2to-LfEX8i2i2DU?usp=drive_link" target="_blank" rel="noreferrer">Open Central Gallery</a>
+        </div>
+        <div class="gallery"><a class="tile" href="https://drive.google.com/drive/folders/1NVfebPLwDzhKGnLvX2to-LfEX8i2i2DU?usp=drive_link" target="_blank"><b>Teaching Sessions</b><small>View photos in Drive</small></a><a class="tile" href="https://drive.google.com/drive/folders/1NVfebPLwDzhKGnLvX2to-LfEX8i2i2DU?usp=drive_link" target="_blank"><b>Ministry Training</b><small>View photos in Drive</small></a><a class="tile" href="https://drive.google.com/drive/folders/1NVfebPLwDzhKGnLvX2to-LfEX8i2i2DU?usp=drive_link" target="_blank"><b>Student Fellowship</b><small>View photos in Drive</small></a></div>
+      </div>
+      <div class="schoolHero">
+        <div>
+          <h2>Western Discipleship School</h2>
+          <p>Focuses on spiritual maturity, servant leadership, evangelism and practical Christian living in the Western region.</p>
+          <div class="pills"><span class="pill">Spiritual maturity</span><span class="pill">Family witness</span><span class="pill">Evangelism</span></div>
+          <a class="btn" href="https://drive.google.com/drive/folders/1IenP9vkNIdrmg5EGx1J6vX1wD-r5WomI?usp=drive_link" target="_blank" rel="noreferrer">Open Western Gallery</a>
+        </div>
+        <div class="gallery"><a class="tile" href="https://drive.google.com/drive/folders/1IenP9vkNIdrmg5EGx1J6vX1wD-r5WomI?usp=drive_link" target="_blank"><b>Worship Gathering</b><small>View photos in Drive</small></a><a class="tile" href="https://drive.google.com/drive/folders/1IenP9vkNIdrmg5EGx1J6vX1wD-r5WomI?usp=drive_link" target="_blank"><b>Bible Study Group</b><small>View photos in Drive</small></a><a class="tile" href="https://drive.google.com/drive/folders/1IenP9vkNIdrmg5EGx1J6vX1wD-r5WomI?usp=drive_link" target="_blank"><b>Community Witness</b><small>View photos in Drive</small></a></div>
+      </div>
+    </section>
+
+    <section id="media">
+      <p class="eyebrow">Media</p>
+      <h1>Sermons, Audio Messages and Live Stream</h1>
+      <div class="grid">
+        <div class="card"><h3>Healing Through the Word</h3><p>Psalm 107:20 - teaching on healing, restoration and strength through the Word of God.</p></div>
+        <div class="card"><h3>Raising Disciples for the Nations</h3><p>Matthew 28:19 - spiritual growth, commitment and becoming a vessel God can use.</p></div>
+        <div class="card"><h3>YouTube Channel</h3><p><a class="btn dark" href="https://www.youtube.com/@sendhiswordministries9520" target="_blank" rel="noreferrer">Visit YouTube Channel</a></p></div>
+      </div>
+    </section>
+
+    <section id="giving">
+      <div class="band">
+        <h2>Partner With Send His Word Ministries</h2>
+        <p>Giving options can be connected to MTN Mobile Money, Airtel Money, card payments and international giving.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="eyebrow">Contact</p>
+      <h1>Visit, Call, Email or Chat With Us</h1>
+      <div class="grid">
+        <div class="card"><h3>Prayer Lines</h3><p>0773 272 195 / 0705 272 195</p></div>
+        <div class="card"><h3>Location</h3><p>Rubaga Road near Furniture House and regional ministry centres.</p></div>
+        <div class="card"><h3>WhatsApp</h3><p><a class="btn dark" href="https://wa.me/256773272195" target="_blank" rel="noreferrer">Chat on WhatsApp</a></p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><h2>Send His Word Ministries</h2><p>“Making Disciples of All Nations” - Matthew 28:19-20</p></div>
+    <div><p>Ready for GitHub and Vercel deployment.</p></div>
+  </footer>
+</body>
+</html>
